@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/RobLoach/metalsmith-concat-convention/master.svg)](https://travis-ci.org/RobLoach/metalsmith-concat-convention)
 [![Dependency Status](https://david-dm.org/RobLoach/metalsmith-concat-convention.png)](https://david-dm.org/RobLoach/metalsmith-concat-convention)
 
-[Metalsmith](http://metalsmith.io) plugin to [concatenate files] through file conventions.
+[Metalsmith](http://metalsmith.io) plugin to [concatenate files](https://github.com/aymericbeaumet/metalsmith-concat) through file conventions.
 
 ## Installation
 
