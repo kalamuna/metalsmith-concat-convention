@@ -1,0 +1,8 @@
+---
+files:
+- script1.js
+- script2.js
+insertNewLine: false
+---
+
+This is the collection of all scripts.
