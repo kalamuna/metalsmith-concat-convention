@@ -1,7 +1,6 @@
 var assertDir = require('assert-dir-equal')
 var collections = require('../')
 var Metalsmith = require('metalsmith')
-var assert = require('assert')
 
 /* global it */
 it('should match collections by pattern', function (done) {

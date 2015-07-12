@@ -12,12 +12,16 @@ module.exports = function (opts) {
     for (var file in files) {
       // Check if it matches the convention.
       if (path.extname(file) === '.concat') {
-        // Add it to the concat array.
-        concats.push(extend({}, files[file], {
-          // Provide the output file name.
-          output: path.basename(file, '.concat')
-        }))
-        delete files[file]
+        // Ensure the file has a files entry.
+        if (files[file].files) {
+          // Append the current file itself to the end of concatenation.
+          files[file].files.push(file)
+          // Add the file to the concat array queue.
+          concats.push(extend({}, files[file], {
+            // Tell Metalsmith Concat where to save the file.
+            output: path.basename(file, '.concat')
+          }))
+        }
       }
     }
 
