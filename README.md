@@ -25,7 +25,7 @@ insertNewLine: false
 // This is the collection of all scripts.
 ```
 
-The above will result in `scripts.js` being script1.js, script2.js, along with the ending content comment.
+The above will result in `scripts.js` being `script1.js`, `script2.js`, along with the ending content comment.
 
 ### CLI
 

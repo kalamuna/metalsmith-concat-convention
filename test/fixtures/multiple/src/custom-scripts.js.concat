@@ -1,0 +1,11 @@
+---
+files:
+- script2.js
+insertNewLine: false
+output: custom.js
+---
+
+/**
+ * custom-scripts.js
+ */
+console.log('Hello World from custom-scripts.js')

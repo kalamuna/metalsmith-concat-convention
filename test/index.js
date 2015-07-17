@@ -2,19 +2,27 @@ var assertDir = require('assert-dir-equal')
 var collections = require('../')
 var Metalsmith = require('metalsmith')
 
-/* global it */
-it('test/fixtures/basic', function (done) {
-  var metalsmith = Metalsmith('test/fixtures/basic')
-  metalsmith
-    .use(collections())
-    .build(function (err) {
-      if (err) {
-        return done(err)
-      }
+/* global it describe */
+function test (name) {
+  var path = 'test/fixtures/' + name
+  it(path, function (done) {
+    var metalsmith = Metalsmith(path)
+    metalsmith
+      .use(collections())
+      .build(function (err) {
+        if (err) {
+          return done(err)
+        }
 
-      // Check whether the files were build just file.
-      assertDir('test/fixtures/basic/build', 'test/fixtures/basic/expected')
+        // Check whether the files were build just file.
+        assertDir(path + '/build', path + '/expected')
 
-      done()
-    })
+        done()
+      })
+  })
+}
+
+describe('metalsmith-concat-conventions', function () {
+  test('basic')
+  test('multiple')
 })
