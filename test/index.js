@@ -3,7 +3,7 @@ var collections = require('../')
 var Metalsmith = require('metalsmith')
 
 /* global it */
-it('should match collections by pattern', function (done) {
+it('test/fixtures/basic', function (done) {
   var metalsmith = Metalsmith('test/fixtures/basic')
   metalsmith
     .use(collections())

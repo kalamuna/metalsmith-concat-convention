@@ -6,12 +6,15 @@ var extend = require('extend')
 var async = require('async')
 
 module.exports = function (opts) {
+  opts = opts || {}
+  opts.extname = '.concat'
+
   return function (files, metalsmith, done) {
     // Collect each concat file.
     var concats = []
     for (var file in files) {
       // Check if it matches the convention.
-      if (path.extname(file) === '.concat') {
+      if (path.extname(file) === opts.extname) {
         // Ensure the file has a files entry.
         if (files[file].files) {
           // Append the current file itself to the end of concatenation.
@@ -19,7 +22,7 @@ module.exports = function (opts) {
           // Add the file to the concat array queue.
           concats.push(extend({}, files[file], {
             // Tell Metalsmith Concat where to save the file.
-            output: path.basename(file, '.concat')
+            output: path.basename(file, opts.extname)
           }))
         }
       }

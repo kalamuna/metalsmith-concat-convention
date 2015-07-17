@@ -5,4 +5,7 @@ files:
 insertNewLine: false
 ---
 
-This is the collection of all scripts.
+/**
+ * scripts.js
+ */
+console.log('Hello World from scripts.js')

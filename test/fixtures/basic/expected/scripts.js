@@ -1,6 +1,16 @@
-script1.js
-script2.js
+/**
+ * script1.js
+ */
+console.log('Hello World from script1.js')
+
+/**
+ * script2.js
+ */
+console.log('Hello World from script2.js')
 
 
-This is the collection of all scripts.
+/**
+ * scripts.js
+ */
+console.log('Hello World from scripts.js')
 

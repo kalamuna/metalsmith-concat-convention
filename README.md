@@ -11,10 +11,10 @@
 
 ## Usage
 
-Each concatenation is handled through naming the destination file `<name>.concat`.
+Each concatenation is handled through naming the destination file `<name>.concat`. The file's metadata options are passed off to [`metalsmith-concat`](https://github.com/aymericbeaumet/metalsmith-concat) to output the concatenated files.
 
 ### Example
-#### src/scripts.js.concat
+#### `src/scripts.js.concat`
 ``` yaml
 ---
 files:
@@ -22,8 +22,10 @@ files:
 - script2.js
 insertNewLine: false
 ---
-This is the collection of all scripts.
+// This is the collection of all scripts.
 ```
+
+The above will result in `scripts.js` being script1.js, script2.js, along with the ending content comment.
 
 ### CLI
 
@@ -32,7 +34,9 @@ If you are using the command-line version of Metalsmith, you can install via npm
 ```json
 {
   "plugins": {
-    "metalsmith-concat-convention": {}
+    "metalsmith-concat-convention": {
+      "extname": ".concat"
+    }
   }
 }
 ```
@@ -44,7 +48,9 @@ If you are using the JS Api for Metalsmith, then you can require the module and 
 ```js
 var concat = require('metalsmith-concat-convention');
 
-metalsmith.use(concat());
+metalsmith.use(concat({
+  extname: '.concat'
+}));
 ```
 
 ## License
