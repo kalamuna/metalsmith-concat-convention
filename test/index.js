@@ -3,10 +3,10 @@ var collections = require('../')
 var Metalsmith = require('metalsmith')
 
 /* global it describe */
-function test (name) {
+function test(name) {
   var path = 'test/fixtures/' + name
   it(path, function (done) {
-    var metalsmith = Metalsmith(path)
+    var metalsmith = new Metalsmith(path)
     metalsmith
       .use(collections())
       .build(function (err) {

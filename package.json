@@ -6,7 +6,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "standard index.js test/index.js; mocha"
+    "test": "mocha && xo --no-semicolon --space"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,6 @@
     "assert-dir-equal": "^1.0.1",
     "metalsmith": "^2.0.1",
     "mocha": "*",
-    "standard": "^5.3.1"
+    "xo": "^0.11.2"
   }
 }

@@ -11,11 +11,10 @@ module.exports = function (opts) {
 
   // Execute the plugin.
   return function (files, metalsmith, done) {
-
     /**
      * Check if the given file is a .concat file. Call done() with result.
      */
-    function filterFile (file, done) {
+    function filterFile(file, done) {
       // Ensure it matches the extension.
       var correctExtention = path.extname(file) === opts.extname
 
@@ -27,7 +26,7 @@ module.exports = function (opts) {
     /**
      * Tell Metalsmith Concatenate to process on the given file config.
      */
-    function concatenateFile (file, done) {
+    function concatenateFile(file, done) {
       // Append the concat file itself to the end of the concatenation.
       files[file].files.push(file)
 
