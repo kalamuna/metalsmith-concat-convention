@@ -25,4 +25,5 @@ function test(name) {
 describe('metalsmith-concat-conventions', function () {
   test('basic')
   test('multiple')
+  test('pattern')
 })
