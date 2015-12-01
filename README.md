@@ -11,7 +11,7 @@
 
 ## Usage
 
-Each concatenation is handled through naming the destination file `<name>.concat`. The file's metadata options are passed off to [`metalsmith-concat`](https://github.com/aymericbeaumet/metalsmith-concat) to output the concatenated files.
+Each concatenation is handled through naming the destination file `<name>.concat`. The file's metadata options are passed off to [`metalsmith-concat`](https://github.com/aymericbeaumet/metalsmith-concat) to output the concatenated files. All [`metalsmith-concat` options](https://github.com/aymericbeaumet/metalsmith-concat#files) apply, aside from `output`, which is provided by the filename itself.
 
 ### Example
 #### `src/scripts.js.concat`
