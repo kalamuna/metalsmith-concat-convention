@@ -1,6 +1,6 @@
 var assertDir = require('assert-dir-equal')
-var collections = require('../')
 var Metalsmith = require('metalsmith')
+var collections = require('../')
 
 /* global it describe */
 function test(name) {

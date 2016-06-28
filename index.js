@@ -1,7 +1,7 @@
 'use strict'
 
-var metalsmithConcat = require('metalsmith-concat')
 var path = require('path')
+var metalsmithConcat = require('metalsmith-concat')
 var async = require('async')
 
 module.exports = function (opts) {
@@ -20,7 +20,7 @@ module.exports = function (opts) {
 
       // Make sure it has defined files.
       var hasFiles = files[file].files
-      done(correctExtention && hasFiles)
+      done(null, correctExtention && hasFiles)
     }
 
     /**
@@ -38,9 +38,13 @@ module.exports = function (opts) {
     }
 
     // Find all the .concat files.
-    async.filter(Object.keys(files), filterFile, function (concats) {
-      // Use async to process each concat object.
-      async.each(concats, concatenateFile, done)
+    async.filter(Object.keys(files), filterFile, function (err, concats) {
+      if (err) {
+        done(err)
+      } else {
+        // Use async to process each concat object.
+        async.each(concats, concatenateFile, done)
+      }
     })
   }
 }

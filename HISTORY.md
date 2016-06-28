@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.0: 2016-06-28
+
+- Updated dependencies
+
 ## v0.2.1: 2015-09-21
 
 - Updated dependencies
