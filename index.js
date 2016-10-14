@@ -31,7 +31,7 @@ module.exports = function (opts) {
       files[file].files.push(file)
 
       // Make sure the output is defined.
-      if (!Object.prototype.hasOwnProperty.call(files[file],'output')) {
+      if (!Object.prototype.hasOwnProperty.call(files[file] , 'output')) {
         console.log(file)
         // Output the file to the destination, without the ".concat".
         var dir = path.dirname(file)
