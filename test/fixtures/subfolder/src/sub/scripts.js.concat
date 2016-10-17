@@ -1,0 +1,11 @@
+---
+files:
+- sub/script1.js
+- sub/script2.js
+insertNewLine: false
+---
+
+/**
+ * scripts.js
+ */
+console.log('Hello World from scripts.js')

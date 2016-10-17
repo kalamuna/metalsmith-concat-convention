@@ -30,8 +30,14 @@ module.exports = function (opts) {
       // Append the concat file itself to the end of the concatenation.
       files[file].files.push(file)
 
-      // Output the file to the destination, without the ".concat".
-      files[file].output = files[file].output || path.basename(file, opts.extname)
+      // Make sure the output is defined.
+      if (!Object.prototype.hasOwnProperty.call(files[file], 'output')) {
+        // Output the file to the destination, without the ".concat".
+        var dir = path.dirname(file)
+        var filename = path.basename(file, opts.extname)
+        var final = path.join(dir, filename)
+        files[file].output = final
+      }
 
       // Tell Metalsmith Concat plugin to concatinate the files.
       metalsmithConcat(files[file])(files, metalsmith, done)
