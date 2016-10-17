@@ -2,7 +2,7 @@
 
 ## v1.1.0: 2016-06-28
 
-- #1 Fix to keep source directory for concatenated files
+- Fix to retain source directory for concatenated files
   - By @fparaggio
 
 ## v1.0.0: 2016-06-28
