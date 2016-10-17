@@ -1,7 +1,7 @@
 ---
 files:
-- script1.js
-- script2.js
+- sub/script1.js
+- sub/script2.js
 insertNewLine: false
 ---
 
