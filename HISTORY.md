@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.0: 2018-01-10
+
+- Update dependencies
+
 ## v1.1.0: 2016-06-28
 
 - Fix to retain source directory for concatenated files

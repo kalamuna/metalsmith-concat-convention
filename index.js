@@ -1,8 +1,8 @@
 'use strict'
 
-var path = require('path')
-var metalsmithConcat = require('metalsmith-concat')
-var async = require('async')
+const path = require('path')
+const metalsmithConcat = require('metalsmith-concat')
+const async = require('async')
 
 module.exports = function (opts) {
   // Default configuration.
@@ -16,10 +16,10 @@ module.exports = function (opts) {
      */
     function filterFile(file, done) {
       // Ensure it matches the extension.
-      var correctExtention = path.extname(file) === opts.extname
+      const correctExtention = path.extname(file) === opts.extname
 
       // Make sure it has defined files.
-      var hasFiles = files[file].files
+      const hasFiles = files[file].files
       done(null, correctExtention && hasFiles)
     }
 
@@ -33,9 +33,9 @@ module.exports = function (opts) {
       // Make sure the output is defined.
       if (!Object.prototype.hasOwnProperty.call(files[file], 'output')) {
         // Output the file to the destination, without the ".concat".
-        var dir = path.dirname(file)
-        var filename = path.basename(file, opts.extname)
-        var final = path.join(dir, filename)
+        const dir = path.dirname(file)
+        const filename = path.basename(file, opts.extname)
+        const final = path.join(dir, filename)
         files[file].output = final
       }
 
@@ -44,7 +44,7 @@ module.exports = function (opts) {
     }
 
     // Find all the .concat files.
-    async.filter(Object.keys(files), filterFile, function (err, concats) {
+    async.filter(Object.keys(files), filterFile, (err, concats) => {
       if (err) {
         done(err)
       } else {
