@@ -1,15 +1,15 @@
-var assertDir = require('assert-dir-equal')
-var Metalsmith = require('metalsmith')
-var collections = require('../')
+const assertDir = require('assert-dir-equal')
+const Metalsmith = require('metalsmith')
+const collections = require('../')
 
 /* global it describe */
 function test(name) {
-  var path = 'test/fixtures/' + name
-  it(path, function (done) {
-    var metalsmith = new Metalsmith(path)
+  const path = 'test/fixtures/' + name
+  it(path, done => {
+    const metalsmith = new Metalsmith(path)
     metalsmith
       .use(collections())
-      .build(function (err) {
+      .build(err => {
         if (err) {
           return done(err)
         }
@@ -22,7 +22,7 @@ function test(name) {
   })
 }
 
-describe('metalsmith-concat-conventions', function () {
+describe('metalsmith-concat-conventions', () => {
   test('basic')
   test('multiple')
   test('pattern')
