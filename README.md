@@ -1,9 +1,8 @@
 # Metalsmith Concat Convention Plugin [![NPM version](https://img.shields.io/npm/v/metalsmith-concat-convention.svg)](https://www.npmjs.org/package/metalsmith-concat-convention)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobLoach/metalsmith-concat-convention.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://img.shields.io/travis/RobLoach/metalsmith-concat-convention/master.svg)](https://travis-ci.org/RobLoach/metalsmith-concat-convention)
 [![Dependency Status](https://david-dm.org/RobLoach/metalsmith-concat-convention.png)](https://david-dm.org/RobLoach/metalsmith-concat-convention)
+[![Greenkeeper badge](https://badges.greenkeeper.io/RobLoach/metalsmith-concat-convention.svg)](https://greenkeeper.io/)
 
 [Metalsmith](http://metalsmith.io) plugin to [concatenate files](https://github.com/aymericbeaumet/metalsmith-concat) through file conventions.
 
