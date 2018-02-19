@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "test": "mocha",
-    "posttest": "xo --no-semicolon --space"
+    "posttest": "xo --no-semicolon --space=2"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,6 @@
     "assert-dir-equal": "^1.0.1",
     "metalsmith": "^2.0.1",
     "mocha": "*",
-    "xo": "^0.18.2"
+    "xo": "*"
   }
 }
