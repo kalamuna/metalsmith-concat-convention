@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/RobLoach/metalsmith-concat-convention",
   "dependencies": {
-    "async": "^2.0.0-rc.6",
-    "metalsmith-concat": "^6.0.0"
+    "async": "~2.6.0",
+    "metalsmith-concat": "~6.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
