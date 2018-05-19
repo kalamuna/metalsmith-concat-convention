@@ -28,7 +28,7 @@
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
     "metalsmith": "^2.0.1",
-    "mocha": "*",
+    "mocha": ">=5.2.0",
     "xo": "*"
   }
 }
