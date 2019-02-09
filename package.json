@@ -1,13 +1,13 @@
 {
   "name": "metalsmith-concat-convention",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Metalsmith Concat Convention Plugin",
   "files": [
     "index.js"
   ],
   "scripts": {
     "test": "mocha",
-    "posttest": "xo --no-semicolon --space=2"
+    "posttest": "xo --no-semicolon --space=2 index.js test/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/RobLoach/metalsmith-concat-convention",
   "dependencies": {
     "async": "~2.6.0",
-    "metalsmith-concat": "~6.0.0"
+    "metalsmith-concat": "github:RobLoach/metalsmith-concat#update"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
