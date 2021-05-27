@@ -6,29 +6,27 @@
     "index.js"
   ],
   "scripts": {
-    "test": "mocha",
-    "posttest": "xo --no-semicolon --space=2 index.js test/index.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/RobLoach/metalsmith-concat-convention"
+    "url": "git://github.com/kalamuna/metalsmith-concat-convention"
   },
   "keywords": [
     "metalsmith"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobLoach/metalsmith-concat-convention/issues"
+    "url": "https://github.com/kalamuna/metalsmith-concat-convention/issues"
   },
-  "homepage": "https://github.com/RobLoach/metalsmith-concat-convention",
+  "homepage": "https://github.com/kalamuna/metalsmith-concat-convention",
   "dependencies": {
-    "async": "~2.6.0",
-    "metalsmith-concat": "^1.2.1"
+    "async": "~3.2.0",
+    "metalsmith-concat": "~7.0.3"
   },
   "devDependencies": {
-    "assert-dir-equal": "^1.0.1",
-    "metalsmith": "^2.0.1",
-    "mocha": "*",
-    "xo": "*"
+    "assert-dir-equal": "^1.1.0",
+    "metalsmith": "^2.3.0",
+    "mocha": "*"
   }
 }
